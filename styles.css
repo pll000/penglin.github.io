@@ -1,0 +1,120 @@
+:root {
+  color-scheme: light;
+  --ink: #203e59;
+  --text: #485968;
+  --muted: #697783;
+  --accent: #386a8a;
+  --line: #dde5e8;
+  --paper: #fdfdfb;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 32px; }
+body { margin: 0; background: var(--paper); color: var(--text); font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--accent); }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; border-radius: 3px; }
+p, h1, h2, h3 { margin: 0; }
+.site-shell { width: min(1080px, calc(100% - 112px)); margin: auto; }
+.site-header { display: flex; align-items: center; gap: 38px; min-height: 110px; border-bottom: 1px solid var(--line); }
+.wordmark { display: inline-flex; align-items: center; gap: 12px; margin-right: auto; color: var(--ink); font-size: 16px; font-weight: 650; letter-spacing: .015em; }
+.monogram { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid #c6d4dc; font-size: 13px; font-weight: 700; letter-spacing: -.03em; }
+.site-nav { display: flex; gap: 30px; font-size: 13px; }
+.site-nav a { padding: 12px 0; }
+.language-switch { display: flex; gap: 3px; padding: 3px; border: 1px solid var(--line); border-radius: 6px; font-size: 12px; }
+.language-switch a { padding: 6px 9px; border-radius: 3px; }
+.language-switch a[aria-current="page"] { color: white; background: var(--ink); }
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) 216px; gap: 80px; padding: 84px 0 76px; align-items: center; }
+.eyebrow { color: var(--accent); font-size: 11px; font-weight: 650; letter-spacing: .14em; line-height: 1.7; }
+h1 { display: flex; align-items: baseline; flex-wrap: wrap; gap: 22px; margin-top: 19px; color: var(--ink); font-size: clamp(40px, 5vw, 58px); font-weight: 650; letter-spacing: -.045em; line-height: 1.25; }
+h1 span { color: var(--muted); font-size: 25px; font-weight: 400; letter-spacing: -.025em; }
+.affiliation { margin-top: 18px; color: var(--accent); font-size: 13px; line-height: 1.8; }
+.affiliation span { margin: 0 9px; color: #adbbc4; }
+.biography { margin-top: 29px; font-size: 15px; line-height: 2.05; }
+.intro-links { display: flex; align-items: center; gap: 27px; margin-top: 30px; font-size: 13px; }
+.primary-link { display: inline-flex; align-items: center; gap: 20px; color: var(--ink); border-bottom: 1px solid var(--ink); padding: 0 0 7px; }
+.text-link { display: inline-flex; align-items: center; gap: 8px; padding-bottom: 7px; }
+.profile-note { border-left: 1px solid var(--line); padding-left: 36px; }
+.profile-symbol { position: relative; display: grid; place-items: center; width: 100px; height: 100px; border: 1px solid #c9d8df; border-radius: 50%; color: var(--ink); background: #f0f5f6; }
+.profile-symbol span { font-family: "Songti SC", "SimSun", serif; font-size: 46px; }
+.profile-symbol i { position: absolute; right: -4px; bottom: 11px; width: 14px; height: 14px; background: var(--accent); border: 3px solid var(--paper); border-radius: 50%; }
+.note-label { margin-top: 25px; font-size: 9px; letter-spacing: .17em; color: var(--muted); }
+.note-title { margin-top: 10px; color: var(--ink); font-size: 16px; line-height: 1.6; font-weight: 600; }
+.note-detail { margin-top: 6px; font-size: 12px; line-height: 1.9; color: var(--muted); }
+.content-section { border-top: 1px solid var(--line); padding: 37px 0 45px; }
+.section-heading { display: flex; align-items: baseline; gap: 16px; }
+.section-number { font-size: 11px; color: var(--accent); font-variant-numeric: tabular-nums; }
+h2 { font-size: 19px; font-weight: 600; color: var(--ink); letter-spacing: -.02em; }
+h2 span { margin-left: 13px; font-size: 12px; font-weight: 400; color: var(--muted); letter-spacing: 0; }
+.research-list { list-style: none; margin: 30px 0 0 30px; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.research-list li { padding-right: 25px; }
+.research-list li + li { border-left: 1px solid var(--line); padding-left: 33px; }
+.research-mark { display: block; width: 17px; height: 3px; margin-bottom: 16px; background: #83a5b8; }
+.research-list h3 { color: var(--ink); font-size: 16px; font-weight: 550; line-height: 1.55; }
+.research-list p { margin-top: 9px; font-size: 12px; line-height: 1.7; color: var(--muted); }
+.education-list { list-style: none; padding: 0; margin: 10px 0 0 30px; }
+.education-list li { position: relative; display: grid; grid-template-columns: 170px minmax(0, 1fr) auto; gap: 24px; padding: 27px 0; }
+.education-list li + li { border-top: 1px solid var(--line); padding-bottom: 0; }
+.education-years { color: var(--ink); font-size: 14px; font-variant-numeric: tabular-nums; line-height: 1.6; }
+.education-years span { display: block; font-size: 11px; color: var(--muted); margin-top: 5px; }
+.education-details h3 { color: var(--ink); font-weight: 600; font-size: 16px; line-height: 1.6; }
+.education-details p { font-size: 13px; line-height: 1.7; margin-top: 3px; }
+.education-details .institution-en { font-size: 11px; color: var(--muted); margin-top: 7px; }
+.education-status { align-self: start; margin-top: 3px; padding: 4px 8px; color: #416859; border: 1px solid #d8e5dc; border-radius: 4px; font-size: 10px; white-space: nowrap; }
+.site-footer { min-height: 100px; display: flex; align-items: center; gap: 28px; border-top: 1px solid var(--line); font-size: 11px; color: var(--muted); }
+.site-footer p { margin-right: auto; }
+.skip-link { position: absolute; top: -70px; left: 20px; padding: 12px; background: var(--ink); color: white; z-index: 5; }
+.skip-link:focus { top: 12px; color: white; }
+
+@media (min-width: 1500px) {
+  .site-shell { width: 1120px; }
+  .intro { padding-top: 100px; padding-bottom: 90px; }
+}
+@media (max-width: 900px) {
+  .site-shell { width: calc(100% - 64px); }
+  .intro { grid-template-columns: minmax(0, 1fr) 170px; gap: 40px; padding: 64px 0; }
+  .profile-note { padding-left: 25px; }
+  .education-list li { grid-template-columns: 142px minmax(0, 1fr) auto; gap: 15px; }
+  .research-list li + li { padding-left: 22px; }
+}
+@media (max-width: 640px) {
+  html { scroll-padding-top: 20px; }
+  .site-shell { width: calc(100% - 40px); }
+  .site-header { min-height: 84px; gap: 12px; flex-wrap: wrap; padding: 18px 0; }
+  .wordmark { gap: 9px; font-size: 15px; }
+  .site-nav { order: 3; width: 100%; justify-content: flex-start; gap: 24px; font-size: 12px; }
+  .site-nav a { padding: 4px 0; }
+  .language-switch { margin-left: auto; }
+  .intro { display: block; padding: 44px 0 43px; }
+  .profile-note { display: none; }
+  h1 { font-size: 43px; gap: 15px; margin-top: 17px; }
+  h1 span { font-size: 23px; }
+  .eyebrow { font-size: 10px; letter-spacing: .09em; }
+  .affiliation { font-size: 12px; margin-top: 15px; }
+  .affiliation span { margin: 0 3px; }
+  .biography { font-size: 14px; line-height: 1.95; margin-top: 23px; }
+  .intro-links { margin-top: 23px; }
+  .content-section { padding-top: 28px; padding-bottom: 33px; }
+  h2 { font-size: 18px; }
+  h2 span { display: block; margin: 5px 0 0; font-size: 11px; }
+  .section-heading { gap: 12px; }
+  .research-list { grid-template-columns: 1fr; margin: 20px 0 0 25px; gap: 21px; }
+  .research-list li, .research-list li + li { padding: 0 0 0 15px; border-left: 2px solid #a6bcc8; }
+  .research-mark { display: none; }
+  .research-list h3 { font-size: 15px; }
+  .research-list p { margin-top: 4px; }
+  .research-list br { display: none; }
+  .education-list { margin: 5px 0 0 25px; }
+  .education-list li { grid-template-columns: 1fr; gap: 12px; padding: 23px 0; }
+  .education-years { font-size: 13px; }
+  .education-years span { display: inline; font-size: 10px; margin-left: 8px; }
+  .education-details h3 { font-size: 15px; padding-right: 8px; }
+  .education-status { position: absolute; right: 0; top: 49px; font-size: 9px; padding: 3px 6px; }
+  html[lang="en"] .education-status { position: static; width: max-content; grid-row: 2; margin: -3px 0 0; }
+  .site-footer { min-height: 90px; flex-wrap: wrap; gap: 10px 22px; padding: 22px 0; line-height: 1.6; }
+  .site-footer p { width: 100%; }
+  .back-to-top { margin-left: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
